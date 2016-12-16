@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	
+	<title>{% block title %}Document{% endblock %}</title>
+</head>
+<body>
+	{% block header %}
+	{%include 'base/header.html' %}
+	{% endblock %}
+
+	{% block content %}
+	<h5>Este es el contenido base</h5>
+	{% endblock %}
+
+	{% block footer %}
+	<h5>Este es el footer base</h5>
+	{% endblock %}
+
+	<script> src="https://code.jquery.com/jquery-1.10.2.min.js"</script>
+	<script> src="{% static 'js/boostrap.min.js' %}"</script>
+
+</body>
+</html>
+
